@@ -6,9 +6,13 @@
         <h3>Hello, <span th:text="${twitterProfile.name}">Some User</span>!</h3>
 
         <h4>These are your friends</h4>
-
         <ul>
             <li th:each="friend:${friends}" th:text="${friend.name}">Friend</li>
+        </ul>
+
+        <h4>These are your tweets</h4>
+        <ul>
+            <li th:each="tweet:${userTweets}" th:text="'Id: ' + ${tweet.id} + ' Text: ' + ${tweet.Text}">Tweet</li>
         </ul>
     </body>
 </html>
