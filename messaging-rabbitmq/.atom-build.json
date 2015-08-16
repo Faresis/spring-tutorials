@@ -1,0 +1,15 @@
+{
+    "cmd": "mvn",
+    "args": ["clean", "package"],
+    "sh": true,
+    "cwd": "{PROJECT_PATH}",
+    "errorMatch": "\n\\[ERROR\\] (?<file>\\S+):\\[(?<line>\\d+),(?<col>\\d+)\\]",
+    "targets": {
+        "clean": {
+            "cmd": "mvn",
+            "args": ["clean"],
+            "sh": true,
+            "cwd": "{PROJECT_PATH}"
+        }
+    }
+}
